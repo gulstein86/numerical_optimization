@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 #from numpy.linalg import inv
 from mpl_toolkits.mplot3d import Axes3D
+import time
 
 def func(x):
     return 100*np.square(np.square(x[0])-x[1])+np.square(x[0]-1)
@@ -27,6 +28,7 @@ def invhess(x):
     return np.linalg.inv(hess)
 
 def grad(x, max_int):
+    start = time.clock()
     miter = 1
     step = .5
     vals = []
@@ -42,6 +44,8 @@ def grad(x, max_int):
         else:
             break
         miter +=1
+    end = time.clock()
+    print ("%.2gs" % (end-start))
     return vals, objectfs, miter
 
 
