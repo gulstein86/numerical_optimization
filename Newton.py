@@ -50,8 +50,9 @@ def grad(x, max_int):
 
 
 
-start = [5,5]
-val, objectf, iters = grad(start,50)
+#start = [5,5]
+start = [15,15]
+val, objectf, iters = grad(start,100)
 
 x = np.array([i[0] for i in val])
 y = np.array([i[1] for i in val])

@@ -1,19 +1,18 @@
 Exercises
-1. What is the role of second derivative function in
-Gradient Descent method?
+1. What is the role of second derivative function in Gradient Descent method?
 2. Explain invHess() in Newton.py, in line manner.
 3. Calculate the time utilized to run both Gradient
 Descent method and Newton method when start is
 set to [5, 5].
-4. What are the initial observations from the both results
-obtained when start is set to [5, 5]?
-5. If start is set to [15, 15], rerun both methods. What are
-the observations now?
+4. What are the initial observations from the both results obtained when start is set to [5, 5]?
+5. If start is set to [15, 15], rerun both methods. What are the observations now?
 6. Compare and contrast between Gradient Descent
 method and Newton method.
 
 answer
 1. 
-
+2. d11, d12, d21, d22 are the value/function for inverse hessian matrix. hess equal to inverse of hessian matrix
 3. 0.0051second for gradient descent, 0.013s for Newton
-4.
+4. Gradient descent is faster and having less interration compare to Newton.
+5. Gradient descent stop at 6th interation due to z value to high. Newton still be able to find the local minimum given you increase the interation to 93(increase from 50).
+6. 

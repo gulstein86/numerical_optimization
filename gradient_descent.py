@@ -39,7 +39,8 @@ def grad(x, max_int):
     return vals, objectfs, miter
 
 
-start = [5,5]
+#start = [5,5]
+start = [15,15]
 val, objectf, iters = grad(start,50)
 start_time=time.time()
 
