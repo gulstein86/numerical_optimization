@@ -12,4 +12,4 @@ Answer
 3. 0.0051second for gradient descent, 0.013s for Newton
 4. Gradient descent is faster and having less interration compare to Newton.
 5. Gradient descent stop at 6th interation due to z value to high. Newton still be able to find the local minimum given you increase the interation to 93(increase from 50).
-6. 
+6. Gradient descent maximizes a function using knowledge of its derivative. Newton's method, a root finding algorithm, maximizes a function using knowledge of its second derivative.
