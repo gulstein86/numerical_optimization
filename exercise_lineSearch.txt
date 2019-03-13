@@ -7,7 +7,7 @@ Exercises
 6. Compare and contrast between Gradient Descent method and Newton method.
 
 Answer
-1. 
+1. Second derivatives are used to understand the rate of change of derivatives.
 2. d11, d12, d21, d22 are the value/function for inverse hessian matrix. hess equal to inverse of hessian matrix
 3. 0.0051second for gradient descent, 0.013s for Newton
 4. Gradient descent is faster and having less interration compare to Newton.
