@@ -21,7 +21,8 @@ def trust_region(f, g, hf, x0, delta_0, max_delta, etha, step_finder, repair_hes
 
         p = step_finder(g(x), b, delta)
         rho = (f(x) - f(x+p)).astype('f') / (model(f, g, b, x, p, delta) - model(f, g, b, x+p, p, delta))
-
+        print('Iteration:'+str(iterations) +' , rho: '+ str(rho))
+        
         if rho < .25:
             delta = .25 * delta
         elif rho >= .75 and np.isclose(la.norm(p), delta, 1e-4):

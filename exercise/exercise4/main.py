@@ -25,6 +25,6 @@ g2 = lambda x: np.array([2*x[0] + a2(x)*200*(1./(100*(x[0]-1))**3)])
 h2 = lambda x: np.array([2 + a2(x)*((200*(1./(100*(x[0]-1))**3))**2 + 600*(1./(100*(x[0]-1))**4))])
 x2s = [np.array([-1]), np.array([-2])]
 
-x, fx, iterations = tr.trust_region(f2, g2, h2, x2s[0], .1, 1, .15, sf.cauchy_point_step_finder)
+x, fx, iterations = tr.trust_region(f2, g2, h2, x2s[0], .1, 1, .15, sf.dogleg_step_finder)
 print('Result in %d iterations:' % iterations)
 print('%s -> %f' % (x, fx))
