@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # In[4]:
@@ -49,10 +49,10 @@ def armijo (valf, grad, niters):
     objectf = []
     val.append(valf)
     objectf.append (func(valf))
-    while miter <niters:
+    while miter <= niters:
         leftf = func(valf+np.power(beta, miter)*grad)
         rightf = func(valf) + sigma *np.power(beta, miter)*dfunc(valf).dot(grad)
-        if leftf-rightf <-0:
+        if leftf-rightf <=0:
             iter_conv = miter
             conval = valf+np.power(beta, iter_conv)*grad
             break
